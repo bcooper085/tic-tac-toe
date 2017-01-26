@@ -1,4 +1,7 @@
 //business logic
+var activePlayer1 = 1;
+var activePlayer2 = 0;
+
 function Player(playerName, playerNumber, playerSymbol) {
   this.playerName = playerName;
   this.playerNumber = playerNumber;
@@ -9,15 +12,24 @@ var player2 = new Player("Marc", 2, "O");
 
 var position = [0,0,0,0,0,0,0,0,0]
 
-if (player.number === 1) {
-  player.symbol = "X";
+if (Player.playerNumber === 1) {
+  Player.playerSymbol = "X";
 } else {
-  player.symbol = "O";
+  Player.playerSymbol = "O";
 }
 
-function Position(position) {
-  this.position = position;
-}
+// function Position(position) {
+//   this.position = position;
+// }
+
+function switchPlayer() {
+  if (activePlayer1 === 1) {
+    activePlayer1 = 0;
+    activePlayer2 = 1;
+  } else {
+    activePlayer1 = 1;
+  }
+};
 
 var one = position[0];
 var two = position[1];
@@ -34,10 +46,11 @@ var nine = position[8];
 //user logic
 $(function() {
   $(".clickbox").click(function() {
-    if (player === 1) {
+    if (activePlayer1 === 1) {
       $(this).children("span").text("X");
     } else {
       $(this).children("span").text("O");
     }
+    switchPlayer();
   })
 });
