@@ -1,0 +1,40 @@
+.container {
+  text-align: center;
+}
+
+.col-md-3 {
+  height: 200px;
+  width: 200px;
+  text-align: center;
+  /*border: solid black;*/
+}
+#one{
+  border-right: solid black;
+  border-bottom: solid black;
+}
+#two{
+  border-bottom: solid black;
+}
+
+#three{
+  border-bottom: solid black;
+  border-left: solid black;
+}
+#four{
+  border-bottom: solid black;
+  border-right: solid black;
+}
+#five{
+  border-bottom: solid black;
+}
+#six{
+  border-bottom: solid black;
+  border-left: solid black;
+}
+#seven{
+border-right: solid black;
+}
+
+#nine{
+border-left: solid black;
+}
