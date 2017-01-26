@@ -1,12 +1,20 @@
-.container {
+body {
   text-align: center;
+  padding-top: 20%;
+  padding-left: 30%;
+  padding-right: 50%;
 }
+
+.filled {
+  z-index: -1;
+}
+
 
 .col-md-3 {
   height: 200px;
   width: 200px;
   text-align: center;
-  /*border: solid black;*/
+  font-size: 100px;
 }
 #one{
   border-right: solid black;
